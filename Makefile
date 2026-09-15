@@ -1,5 +1,5 @@
 bootstrap:
-	bash tool/bootstrap_store.sh
+	./tool/bootstrap_store.sh
 
 check:
 	flutter pub get

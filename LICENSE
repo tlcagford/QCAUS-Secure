@@ -1,15 +1,26 @@
-QCAUS SECURE DUAL LICENSE
+QCAUS Secure Dual License
 
-Copyright (c) 2026 Tony E. Ford / QCAUS.
+Copyright (c) 2026 Tony E. Ford
 
-Academic, educational, personal and non-commercial use is permitted with
-attribution. Commercial, enterprise, governmental, SaaS, resale, or paid
-product use requires a separate written commercial license.
+1. ACADEMIC / PERSONAL / NON-COMMERCIAL LICENSE
+Permission is granted, free of charge, to use, study, modify, and distribute
+this software for academic, educational, research, personal, and other
+non-commercial purposes, provided attribution is retained.
 
-THE SOFTWARE IS PROVIDED AS-IS WITHOUT WARRANTY. NO SECURITY GUARANTEE IS
-MADE. THIS SOFTWARE HAS NOT BEEN INDEPENDENTLY SECURITY AUDITED.
+2. COMMERCIAL LICENSE
+Commercial, enterprise, governmental, SaaS, hosted-service, resale,
+incorporation into a paid product, or other for-profit use requires a
+separate written commercial license from the copyright holder.
 
-QCAUS two-field, AASR, PDP and related physics components are research models
-and do not constitute claims of demonstrated dark-photon communication,
-FDM communication, FTL communication, reactionless propulsion, or other
-unverified physical effect.
+3. NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+NO SECURITY, SAFETY, PERFORMANCE, OR FITNESS GUARANTEE IS MADE.
+
+4. RESEARCH DISCLAIMER
+Research components concerning two-field models, dark photons, FDM,
+quantum communications, or related physics are experimental hypotheses and
+software demonstrations. They do not establish the underlying physical
+claims.
+
+5. THIRD-PARTY DEPENDENCIES
+Third-party packages remain subject to their respective licenses.

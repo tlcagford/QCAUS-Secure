@@ -1,23 +1,29 @@
 # Security Policy
 
-## Current status
+QCAUS Secure v0.1.0 is a prototype and is not independently security audited.
 
-QCAUS Secure v0.1.0 is a research/engineering prototype and has not been independently security audited.
+## Reporting
 
-Do not assume that the current prototype provides production-grade secure messaging.
+Please report suspected security issues privately to:
 
-## Reporting a vulnerability
+**tlcagford@gmail.com**
 
-For responsible disclosure, contact:
+Do not publicly disclose an exploitable vulnerability until a coordinated
+review has occurred.
 
-`tlcagford@gmail.com`
+## Scope
 
-Please include the affected version, platform/OS, reproducible steps, security impact, and proof-of-concept details where safe.
+Particularly important areas include:
 
-## Security claims
+- authentication and identity binding;
+- cryptographic key handling;
+- replay and state-transition attacks;
+- insecure local storage;
+- file handling;
+- platform permissions;
+- update/signing integrity.
 
-QCAUS Secure does not claim to be unhackable or unbreakable.
+## Claims
 
-AASR is designed so that channel observations cannot by themselves authorize cryptographic state transitions. A failed authentication must reject recovery rather than silently accept an attacker-controlled state.
-
-The QCAUS two-field layer is a research/DSP model and is not represented as a proven dark-photon, FDM, or FTL communications mechanism.
+The project does not claim to be "unhackable" or production-secure merely
+because AASR or the two-field research layer is present.

@@ -1,10 +1,9 @@
 {
   "app_name": "QCAUS Secure",
   "version": "0.1.0",
-  "build_number": 1,
+  "build": 1,
   "android_application_id": "com.qcaus.secure",
   "ios_bundle_id": "com.qcaus.secure",
-  "category": "Communication",
-  "privacy_policy": "https://tlcagford.github.io/QCAUS-Secure/privacy.html",
-  "account_deletion": "https://tlcagford.github.io/QCAUS-Secure/account-deletion.html"
+  "privacy_url": "https://tlcagford.github.io/QCAUS-Secure/privacy.html",
+  "account_deletion_url": "https://tlcagford.github.io/QCAUS-Secure/account-deletion.html"
 }

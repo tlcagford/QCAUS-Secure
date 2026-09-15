@@ -1,46 +1,106 @@
-# QCAUS Secure v0.1.0
+# QCAUS Secure
 
-QCAUS Secure is a Flutter communications-suite prototype covering Chat, Files,
-Calls, Contacts, Security/AASR, and the QCAUS research lab.
+**QCAUS Secure v0.1.0** — communications-suite prototype.
 
-## Store-ready baseline
+The application provides a local prototype UI for:
 
-This repository includes native-platform bootstrap scripts, Android/iOS CI
-validation, privacy/legal pages, store listing drafts, launcher icon
-configuration, release/security documentation, and the dual license.
-
-Run `tool/bootstrap_store.ps1` on Windows or
-`bash tool/bootstrap_store.sh` on macOS/Linux to generate the Flutter-native
-Android/iOS platform projects.
+- Chat
+- File-selection workflow
+- Calls UI
+- Contacts UI
+- Security/AASR demonstration
+- QCAUS Lab two-field classical DSP demonstration
 
 ## Security boundary
 
-**AASR — Authenticated Adaptive State Recovery** treats channel observations as
-untrusted. A state transition must be authenticated by established session
-material. Failed authentication rejects recovery.
+The release is **not a production secure messenger and has not been independently audited**.
 
-The current crypto file contains standard primitives for prototype testing.
-The raw X25519 shared secret is not a production key schedule.
+The current build deliberately does not claim:
 
-Production QCAUS Secure must use an independently reviewed authenticated
-messaging protocol with identity binding, forward secrecy, post-compromise
-recovery, replay protection, multi-device key management, and secure local
-key storage.
+- unhackability;
+- quantum-secure messaging;
+- dark-photon communication;
+- FDM communication;
+- FTL communication;
+- reactionless communication;
+- production-grade voice/video calling;
+- server-backed chat;
+- cloud file transfer.
 
-## Research scope
+AASR is an application-layer state-transition guard. It rejects state transitions that are not authorized by the authenticated session token. It does not replace authenticated encryption or identity authentication.
 
-The two-field codec is a classical coherent signal/DSP model. It does not
-demonstrate dark-photon/FDM communication, faster-than-light communication,
-reactionless communication, or any other unverified physical effect.
+The two-field lab is a classical coherent/DSP model. It is a research demonstration and does not establish a physical dark-sector channel.
 
-## Current release status
+## Production cryptography gate
 
-This is not an independently security-audited production messenger.
-Network chat, production voice/video, and cloud file transfer are not included
-in this local prototype.
+Before any production messaging release, replace the prototype session-key path with an independently reviewed authenticated messaging protocol providing:
+
+1. authenticated identities;
+2. a reviewed key schedule/KDF;
+3. forward secrecy;
+4. post-compromise recovery;
+5. replay protection;
+6. multi-device key management;
+7. secure local key storage;
+8. audited protocol implementation;
+9. secure update/signing infrastructure;
+10. formal threat-model review.
+
+Do not use the prototype raw X25519 path as a production protocol.
+
+## Build
+
+Install Flutter stable and verify:
+
+```text
+flutter doctor -v
+```
+
+Then:
+
+```text
+flutter pub get
+dart format lib test
+flutter analyze
+flutter test
+```
+
+Android:
+
+```text
+flutter build appbundle --release --obfuscate --split-debug-info=build/symbols/android
+```
+
+iOS requires macOS/Xcode:
+
+```text
+flutter build ipa --release --obfuscate --split-debug-info=build/symbols/ios
+```
+
+For a fresh checkout, use `tool/bootstrap_store.ps1` on Windows for Android setup or `tool/bootstrap_store.sh` on macOS/Linux.
 
 ## License
 
-Academic/non-commercial/personal use with attribution is permitted. Commercial,
-enterprise, governmental, SaaS, resale, or paid-product use requires a
-separate written license. See LICENSE.
+Dual-license research/commercial model. See `LICENSE`.
+
+## Status
+
+Store submission requires final platform builds, signing, privacy/data-safety declarations, screenshots, metadata, and platform review. This repository supplies the source/build gate; it does not contain signing credentials or a pre-signed store binary.
+
+
+## PUBLIC SECURITY BETA — TRY TO BREAK IT
+
+QCAUS Secure is being developed as a **communications-security architecture research project**, not merely as a messenger application.
+
+The public beta invites independent researchers to inspect the implementation and attack the proposed **Authenticated Adaptive State Recovery (AASR)** architecture. Test MITM modification, replay, downgrade, state rollback, malformed input, recovery, and other failure paths.
+
+**Do not use the beta for sensitive communications.** The current implementation is not independently audited and does not claim to be a production secure messenger or a finished security standard.
+
+See:
+- `QCAUS_SECURE_ARCHITECTURE.md`
+- `AASR_PROTOCOL_SPEC.md`
+- `THREAT_MODEL.md`
+- `SECURITY_TESTING.md`
+- `SECURITY_RESEARCH_PLAN.md`
+- `CONFORMANCE_TEST_PLAN.md`
+- `STANDARDIZATION_ROADMAP.md`

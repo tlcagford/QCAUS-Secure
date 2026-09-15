@@ -1,14 +1,11 @@
 # Changelog
 
-## 0.1.0+1 — Store-ready packaging baseline
+## 0.1.0+1 — Store-build baseline
 
-- Added store release version/build number.
-- Added privacy/legal in-app entry points.
-- Added launcher icon source and Flutter launcher icon configuration.
-- Added Google Play and Apple listing drafts.
-- Added store data-safety inventory.
-- Added release runbook and security model.
-- Added GitHub Actions CI/release-validation workflows.
-- Added cross-platform native-project bootstrap scripts.
-- Corrected local chat state update behavior.
-- Clarified that raw X25519 shared-secret output is prototype-only and not a production key schedule.
+- Added complete Flutter application shell.
+- Added Chat, Files, Calls, Contacts UI.
+- Added AASR state-transition guard and test coverage.
+- Added two-field classical DSP demonstration and tests.
+- Added prototype cryptographic primitives with explicit production warning.
+- Added Android/iOS bootstrap and release-validation workflows.
+- Added privacy, store, and security documentation.
