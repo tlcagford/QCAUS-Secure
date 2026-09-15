@@ -1,39 +1,46 @@
 # QCAUS Secure v0.1.0
 
-QCAUS Secure is a Flutter communications-suite prototype: Chat, secure file
-transfer workflow, Calls, Contacts, Security, and QCAUS Lab.
+QCAUS Secure is a Flutter communications-suite prototype covering Chat, Files,
+Calls, Contacts, Security/AASR, and the QCAUS research lab.
 
-## Core differentiator
+## Store-ready baseline
 
-**AASR — Authenticated Adaptive State Recovery**
+This repository includes native-platform bootstrap scripts, Android/iOS CI
+validation, privacy/legal pages, store listing drafts, launcher icon
+configuration, release/security documentation, and the dual license.
 
-Channel changes are treated as untrusted observations. A new communication
-state must be authenticated by established session material before recovery.
+Run `tool/bootstrap_store.ps1` on Windows or
+`bash tool/bootstrap_store.sh` on macOS/Linux to generate the Flutter-native
+Android/iOS platform projects.
 
-The research layer models a classical two-field coherent codec using Δφ and Ω.
-It does not claim demonstrated dark-photon/FDM communication or faster-than-light
-communication.
+## Security boundary
 
-## Security
+**AASR — Authenticated Adaptive State Recovery** treats channel observations as
+untrusted. A state transition must be authenticated by established session
+material. Failed authentication rejects recovery.
 
-This is an engineering prototype, not an "unhackable" claim and not an
-independently audited replacement for a mature secure-messaging protocol.
-Production deployment should integrate a reviewed protocol providing identity
-authentication, forward secrecy, post-compromise recovery, multi-device
-management, and secure key storage.
+The current crypto file contains standard primitives for prototype testing.
+The raw X25519 shared secret is not a production key schedule.
 
-## Product direction
+Production QCAUS Secure must use an independently reviewed authenticated
+messaging protocol with identity binding, forward secrecy, post-compromise
+recovery, replay protection, multi-device key management, and secure local
+key storage.
 
-Chat • Voice/Video • Files • Contacts • Mail • AASR • QCAUS Lab
+## Research scope
 
-## Run
+The two-field codec is a classical coherent signal/DSP model. It does not
+demonstrate dark-photon/FDM communication, faster-than-light communication,
+reactionless communication, or any other unverified physical effect.
 
-Install Flutter, then:
+## Current release status
 
-    flutter pub get
-    flutter run
+This is not an independently security-audited production messenger.
+Network chat, production voice/video, and cloud file transfer are not included
+in this local prototype.
 
 ## License
 
-Academic/non-commercial/personal use with attribution is permitted. Commercial
-or enterprise use requires a separate written license. See LICENSE.
+Academic/non-commercial/personal use with attribution is permitted. Commercial,
+enterprise, governmental, SaaS, resale, or paid-product use requires a
+separate written license. See LICENSE.
